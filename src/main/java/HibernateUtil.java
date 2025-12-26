@@ -12,6 +12,8 @@ public class HibernateUtil {
                     .configure("hibernate.cgf.xml")
                     .addAnnotatedClass()
                     .buildSessionFactory();
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
