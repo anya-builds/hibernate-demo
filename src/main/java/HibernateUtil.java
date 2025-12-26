@@ -1,19 +1,26 @@
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-//import javax.security.auth.login.Configuration;
 
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
-    static  {
+    static {
         try {
             sessionFactory = new Configuration()
-                    .configure("hibernate.cgf.xml")
-                    .addAnnotatedClass()
+                    .configure("hibernate.cfg.xml")
+                    .addAnnotatedClass(UserClassHibernate.class)
                     .buildSessionFactory();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static Session getSession() {
+        return sessionFactory.getCurrentSession();
+    }
+
+    public static void close() {
+        sessionFactory.close();
     }
 }
