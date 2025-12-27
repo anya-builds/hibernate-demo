@@ -2,7 +2,7 @@ import org.hibernate.Session;
 
 public class HibernateDemoMain {
     public static void main(String[] args) {
-        Session session = HibernateUtil.getSession();
+        Session session = JpaDemoMain.getSession();
 
         try {
             UserClassHibernate user = new UserClassHibernate("Alice");
@@ -13,7 +13,7 @@ public class HibernateDemoMain {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            HibernateUtil.close();
+            JpaDemoMain.close();
         }
 
     }
