@@ -9,7 +9,7 @@
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo_db"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="MyNewPass@123"/>
+            <property name="jakarta.persistence.jdbc.password" value="T9!rA#2Z@L7p$Q"/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>
